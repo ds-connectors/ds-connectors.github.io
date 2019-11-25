@@ -23,6 +23,40 @@ a.anchor-link {
 }
 
 
+/* Course List Styles */
+
+table.listing {
+  width: 100%;
+}
+
+td.listing-icons {
+  text-align: right;
+  font-size: 25px;
+}
+
+td.listing-icons a, td.listing-icons a:hover,
+td.listing-icons a:visited, td.listing-icons a:link {
+  color: black;
+}
+
+td.listing-icons i.fa-external-link-alt {
+  font-size: 20px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+
+td.listing-icons a:hover {
+  text-decoration: none;
+}
+
+td.listing-icons i {
+  padding: 0 5px;
+}
+
+ul#featured-courses {
+  margin-bottom: 90px;
+}
+
 /* From Bootstrap */
 /* Sticky footer styles
 -------------------------------------------------- */
