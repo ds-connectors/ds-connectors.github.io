@@ -101,6 +101,12 @@ table {
   background-color: #f2f4f8;
 }
 
+.quiet {
+  color: #AAA;
+  /* opacity: ; */
+  font-style: italic;
+}
+
 /* Staff */
 
 .staff th, .staff tr, .staff td {
