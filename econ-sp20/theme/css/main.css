@@ -107,6 +107,16 @@ table {
   font-style: italic;
 }
 
+h1#course-name {
+  padding-top: 20px;
+}
+
+h1#course-name span.quiet {
+  font-style: normal;
+  font-weight: lighter;
+  margin-left: 15px;
+}
+
 /* Staff */
 
 .staff th, .staff tr, .staff td {
