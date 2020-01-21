@@ -92,10 +92,21 @@ table {
   padding: .3rem .7rem;
 }
 
-.calendar .list-group.monday .list-group-item {
+/* Alternate row highlighting */
+
+.calendar tbody tr:nth-of-type(2n) {
+  background-color: #e6e8f2;
+}
+
+.calendar tbody tr:nth-of-type(2n) .list-group, 
+.calendar tbody tr:nth-of-type(2n) .list-group-item {
+  background-color: #e6e8f2;
+}
+
+/* .calendar .list-group.monday .list-group-item {
   background-color: #e6e8f2;
   border: none;
-}
+} */
 
 .calendar tr.wednesday {
   background-color: #f2f4f8;
@@ -128,7 +139,7 @@ h1#course-name span.quiet {
   text-align: center;
 }
 
-.staff tr{
+.staff tr {
   border:0;
   border-top: 1px solid #eeeeee;
 }
