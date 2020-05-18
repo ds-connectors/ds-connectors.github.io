@@ -1,195 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>DS Connectors</title>
-        <!-- Latest compiled and minified Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-        <link rel="stylesheet" href="./theme/css/main.css" />
+  <title>Data Science Connectors</title>
 
-        <link rel="icon" href="./assets/images/favicon.ico" />
+  <!-- Custom fonts for this theme -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-        <!-- MathJax script -->
-        <script type="text/javascript" async
-          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
-        </script>
+  <!-- Theme CSS -->
+  <link href="css/freelancer.min.css" rel="stylesheet">
 
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-        </script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-        <!-- FontAwesome -->
-        <script src="https://kit.fontawesome.com/a58fb71897.js" crossorigin="anonymous"></script>
-
-        
 </head>
 
-<body id="index" class="home">
+<body id="page-top">
 
-  <nav class="navbar navbar-light bg-light navbar-expand-lg position-sticky fixed-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-white text-uppercase fixed-top pb-0" id="mainNav">
+    
     <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="./">
-          <img src="assets/images/blue_text.png" height="25px" />
-        </a>
-
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
+      <a href="https://data.berkeley.edu/" target="_blank">
+        <img  src="img/ds-logo.svg" width="90" alt=""> 
+      </a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-landing text-secondary rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " href="https://ds-modules.github.io/DS-Modules/guide/" style="color:#2c3e50" target="_blank">DSEP</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://ds-modules.github.io/curriculum-guide/intro" style="color:#2c3e50" target="_blank">Curriculum Guide</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://ds-connectors.github.io/" style="color:#2c3e50" target="_blank">Modules</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://data.berkeley.edu/" style="color:#2c3e50" target="_blank">CDSS</a>
+          </li>
+          
+        </ul>
       </div>
-
-      <div class="collapse navbar-collapse" id="navbarLinks">
-
-            <ul class="navbar-nav ml-auto justify-content-end">
-
-                <!-- Sample NavBar Item
-
-                  <li class="nav-item">
-                      <a class="nav-link" href="./">EconModels</a>
-                  </li>
-
-                -->
-
-                <!-- Sample Dropdown NavBar Item
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Resources
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="./python-reference.html">Python Reference</a>
-                      <a class="dropdown-item" href="http://data8.org/datascience/">Datascience Docs</a>
-                    </div>
-                  </li>
-
-                -->
-
-                <li class="nav-item">
-                  <a href="https://data.berkeley.edu/" class="nav-link">Division of Data Sciences</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a href="https://ds-modules.github.io/DS-Modules" class="nav-link">DS Modules</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a href="https://ds-modules.github.io/modules-textbook" class="nav-link">Modules Textbook</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a href="https://ds-modules.github.io/curriculum-guide" class="nav-link">Curriculum Guide</a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="https://data.berkeley.edu/education/ark" class="nav-link">Academic Resource Kit</a>
-                </li>
-                
-            </ul>
-
-        </div>
-        </div>
+    </div>
   </nav>
 
-  <div class="container">
-    <section id="content">
+  <!-- Masthead -->
+  <header class="masthead text-secondary text-center" style="background-image: url('img/berksunset.png'); background-repeat: no-repeat; width : 100%; background-size: 100% 100%;">
+    <!-- <div class=" d-flex align-items-center flex-column"> -->
+    <div> 
+    <p> </p>
+    
+    <br> 
+    <br>
+    <br>
+   
+    
 
-      <h1>Data Science Connectors</h1>
 
-      <p>Connector courses are in partnership with the <a href="http://data.berkeley.edu/">UC Berkeley Division of Data Science and Information</a>.</p>
+      <!-- Masthead Heading -->
+      <br>
+      <h1 class="masthead-heading text-uppercase text-secondary mb-0"> &nbsp;&nbsp; Data Science &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Connectors</h1>
 
-      <h3>Offerings</h3>
-
-      <p>Each offering site includes links to assignments, slides, and readings. You are welcome to use any of the materials you find.</p>
-
-      <ul class="list-group" id="featured-courses">
-
-        <li class="list-group-item">
-
-          <table class="listing"><tr>
-          
-            <td>
-              <h5>Economic Models <em>(Data 88)</em></h5>
-            </td><td class="listing-icons">
-              <a href="https://ds-connectors.github.io/econ-sp20" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://ds-connectors.github.io/econ-models-textbook" target="_blank">
-                <i class="fas fa-book"></i>
-              </a>
-              <a href="https://github.com/ds-connectors/DATA-88-EconModels" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </td>
-
-          </tr></table>
-
-          <p>The idea for the class is to take students through a series of exercises to motivate and illustrate key concepts in Economics with examples in Python Jupyter notebooks. The class will cover concepts from Introductory Economics, MIcroeconomic Theory, Econometrics, Development Economics, Environmental Economics and Public Economics. The course will give data science students a pathway to apply python programming and data science concepts within the discipline of economics. The course will also give economics students a pathway to apply programming to reinforce fundamental concepts and to advance the level of study in upper division coursework and possible thesis work.</p>
-
-        </li>
-        <li class="list-group-item">
-
-          <table class="listing"><tr>
-          
-            <td>
-              <h5>PyEarth: A Python Introduction to Earth Science <em>(EPS 88)</em></h5>
-            </td><td class="listing-icons">
-              <a href="https://github.com/ds-connectors/EPS88-Fall-2019" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </td>
-
-          </tr></table>
-
-          <p>Earthquakes and El Ninos are examples of natural hazards in California. The course uses Python/Jupyter Notebook and real-world observations to introduce students to these and other Earth phenomena and their underlying physics. The students will learn how to access and visualize the data, extract signals, and make probability forecasts. The final module is a project that synthesizes the course material to make a probabilistic forecast.</p>
-
-        </li>
-        <li class="list-group-item">
-
-          <table class="listing"><tr>
-          
-            <td>
-              <h5>Genetics and Genomics <em>(Data 88)</em></h5>
-            </td><td class="listing-icons">
-              <!-- <a href="https://d8a-88.github.io/econ-fa19" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-              </a> -->
-              <a href="https://github.com/ds-connectors/" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </td>
-
-          </tr></table>
-
-          <p>Recent years have witnessed a rapid expansion in the creation and utilization of genetic and genomic data across diverse domains such as business, biological research, and medicine. In this Data 8 connector course we will survey relevant questions of interest and employ the methods frequently relied upon by analysts to derive insights from genetic and genomic data. Topics will include the comparison of DNA sequences, dimension reduction, the characterization of transcriptomes, and genome-wide association studies, among others. In addition to hands-on work with data, we will also consider the history of the genetic and genomic sciences and their intersection with current events, ethics, and modern medicine. Students should exit with an understanding of the central role played by data in the fields and an appreciation for the remaining challenges in light of ever-increasing degrees of personalization of, and access to, these sciences.</p>
-
-        </li>
       
-      </ul>
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+       
+      </div>
+      
 
-    </section><!-- /#content -->
+      <!-- Masthead Subheading -->
+      <br> 
+      <br>
+      <br>
+      <br>
+      <br>
 
-  </div>
+      <p class="masthead-subheading text-white font-weight-light mb-0">Connector courses are in partnership with the UC Berkeley Division of Computing, Data Science, and Society<p>
+        
+      
+      <br>
+      <br>
+      <br>
+      <br> 
+      <div class="text-center mt-4">
+        <a class="btn btn-xl btn-outline-primary " href="#portfolio">
+          Learn More
+        </a>
+      </div>
+      <br>
+      <br>
+      <br>
+     
+      
+  
+      
+      <!-- <div>  -->
 
-  <footer class="footer">
+        <p>     </p>
+      
 
+    </div>
+  </header>
+
+   <!-- About Section -->
+   <section class="page-section bg-primary-connect text-secondary mb-0" id="about">
     <div class="container">
-      <table style="width: 100%;"><tr>
-        <td style="text-align: right;">
-          <a href="https://www.ocf.berkeley.edu" style="text-align: right">
-            <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg"
-              alt="Hosted by the OCF" style="border: 0;" />
-          </a>
-        </td>
-      </tr></table>
+
+      <!-- About Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary">About Connectors</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        
+      </div>
+
+      <!-- About Section Content -->
+      <div class="row ">
+          <br>
+          <br>
+          <br>
+          <p class = "lead ">Connector courses weave together core concepts and approaches from Data 8 with complementary ideas or areas. Along the way, students gain additional experience, broader insights, or deeper theoretical or computational foundations. </p>
+          
+          <br>
+          <br>
+          
+          <p class = "lead "> Offered by faculty across many departments and fields of study, connectors are optional but highly encouraged and are designed to be taken at the same time or after the Foundations course. They offer two or more units of course credit. Data 8 and connectors complement each other and often use similar materials or tools. For connector courses being offered in the current/next semester, please view our <a href="https://data.berkeley.edu/academics/undergraduate-programs/data-science-offerings">current course offerings</a>. </p>
+          <br>
+          <br>
+          <p class = "lead "> To contact the connectors team, email <a href="mailto:ds-curriculum@berkeley.edu">ds-curriculum@berkeley.edu</a> </p>
+        
+
+
+          
+
+        
+        
+        
+      </div>
+      
+
+    
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+      <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Featured Connectors</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <p class="lead">Some great courses to check out!</p>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Portfolio Grid Items -->
+      <div class="row">
+
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/econModels.png" alt="">
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/earthSci.png" alt="">
+          </div>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/genGenomics.png" alt="">
+          </div>
+        </div>
+
+        
+
+      </div>
+      <!-- /.row -->
+
+      <div class="text-center mt-4">
+        <a class="btn btn-xl btn-outline-primary" href="https://data.berkeley.edu/education/connectors" target="_blank">
+          Previous List of Courses
+        </a>
+        &nbsp;
+        <a class="btn btn-xl btn-outline-primary" href=" https://labanyamukhopadhyay.github.io/connectorslibrary/" target="_blank">
+          Connectors Library
+        </a>
+      </div>
+      
+      
+
+    </div>
+  </section>
+
+ 
+
+  <!-- <section class="page-section text-secondary mb-0" id="about">
+    <div class="container text-center">
+      <h2 class="page-section-heading text-center text-uppercase text-secondary">Form</h2>
+      <br>
+      <br>
+      
     </div>
 
+  </section> -->
+
+  
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+
+        <!-- Footer Location -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4"></h4>
+          <p class="lead mb-0">
+            <br></p>
+        </div>
+
+        <!-- Footer Social Icons -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Email</h4>
+          <a text-white href="mailto:ds-curriculum@berkeley.edu">ds-curriculum@berkeley.edu</a>  
+          <br>
+          <br>
+          <h4 class="text-uppercase mb-4">Keep In Touch</h4>
+          
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/UCBdatascience/">
+            <i class="fab fa-fw fa-facebook-f"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/berkeleydatasci/?hl=en">
+            <i class="fab fa-fw fa-instagram"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/ds-connectors">
+            <i class="fab fa-fw fa-github"></i>
+          </a>
+          
+        </div>
+
+      
+
+      </div>
+    </div>
   </footer>
 
+  <!-- Copyright Section -->
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Copyright &copy; Data Science Education Program @ UC Berkeley.</small>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Portfolio Modals -->
+
+  <!-- Portfolio Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <!-- <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Linguistics 110</h2> -->
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <p class="h2 text-secondary  mb-0">Economic Models </p>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <div class="divider-custom">
+                  <p class=" text-secondary text-uppercase mb-0">Data 88</p>
+                </div>
+               
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">The idea for the class is to take students through a series of exercises to motivate and illustrate key concepts in Economics with examples in Python Jupyter notebooks. The class will cover concepts from Introductory Economics, MIcroeconomic Theory, Econometrics, Development Economics, Environmental Economics and Public Economics. The course will give data science students a pathway to apply python programming and data science concepts within the discipline of economics. The course will also give economics students a pathway to apply programming to reinforce fundamental concepts and to advance the level of study in upper division coursework and possible thesis work.</p>
+                <div> 
+                  <!-- <div>
+                    <a class=" btn btn-xl btn-outline-primary" href="https://github.com/ds-connectors/DATA-88-EconModels-sp20" target="_blank">
+                      <img src="img/github.svg"  alt=""> 
+                    </a>
+                    <div>
+                      <a class=" btn btn-xl btn-outline-primary" href="https://github.com/ds-connectors/DATA-88-EconModels-sp20" target="_blank">
+                        <p class = 'lead'>"Github course files"</p> 
+                      </a>
+                    </div>
+                  </div>
+                  <a class="btn btn-xl btn-outline-primary" href="https://ds-connectors.github.io/econ-models-textbook/intro" target="_blank">
+                    <img src="img/book.svg"  alt="" width="40" height="40"> 
+                  </a>
+                
+                  <a class="btn btn-xl btn-outline-primary" href="https://ds-connectors.github.io/econ-sp20/" target="_blank">
+                    <img src="img/external-link.svg"  alt="" width="40" height="40">
+                  </a> -->
+                  <div class = 'github-logo'>
+                    <a  href="https://github.com/ds-connectors/DATA-88-EconModels-sp20" target="_blank"> 
+                      <img src = "img/github-logo-conn.png" width = "100" height= "75" alt = "">
+                    </a> 
+                    <a href="https://github.com/ds-connectors/DATA-88-EconModels-sp20" target="_blank"> 
+                      <img src = "img/github-hover-conn.png" class = "github-hover" width = "100" height= "75" alt = "">
+                    </a>
+                  </div>
+
+                 
+                  <div class = 'github-logo'>
+                    <a  href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fds-connectors%2FDATA-88-EconModels-sp20&urlpath=tree%2FDATA-88-EconModels-sp20%2F" target="_blank"> 
+                      <img src = "img/datahub-logo-conn.png" width = "100" height= "75" alt = "">
+                    </a> 
+                    <a href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fds-connectors%2FDATA-88-EconModels-sp20&urlpath=tree%2FDATA-88-EconModels-sp20%2F" target="_blank"> 
+                      <img src = "img/datahub-hover-conn.png" class = "github-hover" width = "100" height= "75" alt = "">
+                    </a>
+                  </div>
+                
+                
+                  <div class = 'github-logo'>
+                    <a  href="https://mybinder.org/v2/gh/ds-connectors/DATA-88-EconModels-sp20/master/" target="_blank"> 
+                      <img src = "img/binder-logo-conn.png" width = "100" height= "75" alt = "">
+                    </a> 
+                    <a href="https://mybinder.org/v2/gh/ds-connectors/DATA-88-EconModels-sp20/master" target="_blank"> 
+                      <img src = "img/binder-hover-conn.png" class = "github-hover" width = "100" height= "75" alt = "">
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <!-- <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Linguistics 110</h2> -->
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <p class="h2 text-secondary  mb-0">PyEarth: A Python Introduction to Earth Science </p>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <div class="divider-custom">
+                  <p class=" text-secondary text-uppercase mb-0">EPS 88</p>
+                </div>
+               
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Earthquakes and El Ninos are examples of natural hazards in California. The course uses Python/Jupyter Notebook and real-world observations to introduce students to these and other Earth phenomena and their underlying physics. The students will learn how to access and visualize the data, extract signals, and make probability forecasts. The final module is a project that synthesizes the course material to make a probabilistic forecast.</p>
+                <div> 
+                  <!-- <a class="btn btn-xl btn-outline-primary" href="https://github.com/ds-connectors/DATA-88-EconModels-sp20" target="_blank">
+                    <img src="img/github.svg"  alt=""> 
+                  </a>
+
+                  <a class="btn btn-xl btn-outline-primary" href="https://ds-connectors.github.io/econ-models-textbook/intro" target="_blank">
+                    <img src="img/book.svg"  alt="" width="40" height="40"> 
+                  </a>
+                
+                  <a class="btn btn-xl btn-outline-primary" href="https://ds-connectors.github.io/econ-sp20/" target="_blank">
+                    <img src="img/external-link.svg"  alt="" width="40" height="40">
+                  </a> -->
+                  <div class = 'github-logo'>
+                    <a  href="https://github.com/ds-connectors/EPS-88" target="_blank"> 
+                      <img src = "img/github-logo-conn.png" width = "100" height= "75" alt = "">
+                    </a> 
+                    <a href="https://github.com/ds-connectors/EPS-88" target="_blank"> 
+                      <img src = "img/github-hover-conn.png" class = "github-hover" width = "100" height= "75" alt = "">
+                    </a>
+                  </div>
+
+                 
+                  <div class = 'github-logo'>
+                    <a  href="http://datahub.berkeley.edu/user-redirect/interact?account=ds-connectors&repo=EPS-88&branch=master&path=Fall_2019" target="_blank"> 
+                      <img src = "img/datahub-logo-conn.png" width = "100" height= "75" alt = "">
+                    </a> 
+                    <a href="http://datahub.berkeley.edu/user-redirect/interact?account=ds-connectors&repo=EPS-88&branch=master&path=Fall_2019" target="_blank"> 
+                      <img src = "img/datahub-hover-conn.png" class = "github-hover" width = "100" height= "75" alt = "">
+                    </a>
+                  </div>
+                
+                
+                  <div class = 'github-logo'>
+                    <a  href="https://mybinder.org/v2/gh/ds-connectors/EPS-88/master" target="_blank"> 
+                      <img src = "img/binder-logo-conn.png" width = "100" height= "75" alt = "">
+                    </a> 
+                    <a href="https://mybinder.org/v2/gh/ds-connectors/EPS-88/master" target="_blank"> 
+                      <img src = "img/binder-hover-conn.png" class = "github-hover" width = "100" height= "75" alt = "">
+                    </a>
+                  </div>
+                </div>
+
+                
+                  <p> </p>
+          
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <!-- <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Linguistics 110</h2> -->
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <p class="h2 text-secondary  mb-0">Genetics and Genomics </p>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <div class="divider-custom">
+                  <p class=" text-secondary text-uppercase mb-0">Data 88</p>
+                </div>
+               
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Recent years have witnessed a rapid expansion in the creation and utilization of genetic and genomic data across diverse domains such as business, biological research, and medicine. In this Data 8 connector course we will 
+                  survey relevant questions of interest and employ the methods frequently relied upon by analysts to derive insights from genetic and genomic data. Topics will include the comparison of DNA sequences, dimension reduction, the characterization of transcriptomes, and genome-wide association studies, among others. In addition to hands-on work with data, we will also consider the history of the genetic and genomic sciences and their intersection with current events, ethics, and modern medicine. Students should exit with an understanding of the central role played by data in the fields and an appreciation for the remaining challenges in light of ever-increasing degrees of personalization of, and access to, these sciences.</p>
+                <div> 
+                  <!-- <a class="btn btn-xl btn-outline-primary" href="https://github.com/ds-connectors/DATA-88-EconModels-sp20" target="_blank">
+                    <img src="img/github.svg"  alt=""> 
+                  </a>
+
+                  <a class="btn btn-xl btn-outline-primary" href="https://ds-connectors.github.io/econ-models-textbook/intro" target="_blank">
+                    <img src="img/book.svg"  alt="" width="40" height="40"> 
+                  </a>
+                
+                  <a class="btn btn-xl btn-outline-primary" href="https://ds-connectors.github.io/econ-sp20/" target="_blank">
+                    <img src="img/external-link.svg"  alt="" width="40" height="40">
+                  </a> -->
+                  <div class = 'github-logo'>
+                    <a  href="https://github.com/ds-connectors/Data88-Genetics_and_Genomics" target="_blank"> 
+                      <img src = "img/github-logo-conn.png" width = "100" height= "75" alt = "">
+                    </a> 
+                    <a href="https://github.com/ds-connectors/Data88-Genetics_and_Genomics" target="_blank"> 
+                      <img src = "img/github-hover-conn.png" class = "github-hover" width = "100" height= "75" alt = "">
+                    </a>
+                  </div>
+
+                 
+                  <div class = 'github-logo'>
+                    <a  href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fds-connectors%2FData88-Genetics_and_Genomics&urlpath=tree%2FData88-Genetics_and_Genomics%2F" target="_blank"> 
+                      <img src = "img/datahub-logo-conn.png" width = "100" height= "75" alt = "">
+                    </a> 
+                    <a href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fds-connectors%2FData88-Genetics_and_Genomics&urlpath=tree%2FData88-Genetics_and_Genomics%2F" target="_blank"> 
+                      <img src = "img/datahub-hover-conn.png" class = "github-hover" width = "100" height= "75" alt = "">
+                    </a>
+                  </div>
+                
+                
+                  <div class = 'github-logo'>
+                    <a  href="https://mybinder.org/v2/gh/ds-connectors/Data88-Genetics_and_Genomics/master" target="_blank"> 
+                      <img src = "img/binder-logo-conn.png" width = "100" height= "75" alt = "">
+                    </a> 
+                    <a href="https://mybinder.org/v2/gh/ds-connectors/Data88-Genetics_and_Genomics/master" target="_blank"> 
+                      <img src = "img/binder-hover-conn.png" class = "github-hover" width = "100" height= "75" alt = "">
+                    </a>
+                  </div>
+                </div>
+
+                
+                  <p> </p>
+          
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.js"></script>
+
 </body>
+
 </html>
