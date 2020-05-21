@@ -1,4 +1,4 @@
-# [Data Science Connectors page](https://labanyamukhopadhyay.github.io/connectors-dsep/)
+# [Data Science Connectors page](https://ds-connectors.github.io/)
 
 
 ## How to Update Site
