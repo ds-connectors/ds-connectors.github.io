@@ -1,0 +1,30 @@
+<td>{{ calendarItem.date }}</td>
+<td>{{ calendarItem.title }}</td>
+
+<!-- materials -->
+<td><ul class="list-group">
+  <li *ngFor="let material of calendarItem.materials" class="list-group-item">
+    
+    <ng-container *ngIf="material.url; then materialHasUrl; else materialNoUrl"></ng-container>
+    <ng-template #materialHasUrl>
+      <a  [href]="material.url">{{ material.title}}</a>
+    </ng-template>
+    <ng-template #materialNoUrl>{{ material.title }}</ng-template>
+
+  </li>
+</ul></td>
+
+<!-- assignment -->
+<td>
+  <ng-container *ngIf="calendarItem.assignment">
+
+    <ng-container *ngIf="calendarItem.assignment.url; then assignmentHasUrl; else assignmentNoUrl"></ng-container>
+    <ng-template #assignmentHasUrl>
+      <a [href]="calendarItem.assignment.url">{{ calendarItem.assignment.title }}</a> <ng-container *ngIf="calendarItem.assignment.dueDate">(due {{ calendarItem.assignment.dueDate }})</ng-container>
+    </ng-template>
+    <ng-template #assignmentNoUrl>
+      {{ calendarItem.assignment.title }} <ng-container *ngIf="calendarItem.assignment.dueDate">(due {{ calendarItem.assignment.dueDate }})</ng-container>
+    </ng-template>
+
+  </ng-container>
+</td> 
